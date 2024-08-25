@@ -68,6 +68,34 @@ This project implements a text classification model using BERT (Bidirectional En
 
 The trained model and tokenizer will be saved in the `./model_save/` directory.
 
+
+
+## Machine Learning
+
+This repository contains Matlab code for ensemble learning algorithms aimed at predicting greenwashing.
+
+### Main Files
+
+- **`run_RUSBoost.m`**: This is the Matlab code to run the RUSBoost ensemble learning algorithm for predicting greenwashing. 
+- **`data_reader.m`**: Required for reading the data necessary for the model.
+- **`evaluate.m`**: Used for evaluating model performance.
+
+### Additional Algorithms
+
+We also provide training code for other algorithms, including:
+- Random Forest
+- LSTM
+- SVM
+- And others
+
+### Hyper-Parameter Tuning
+
+- **`tune_RUSBoost.m`**: This Matlab code replicates the hyper-parameter tuning for our RUSBoost model. The number of learners/trees is tuned using a traditional grid search approach. The parameter space is manually specified as:
+[100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1500, 2000, 2500, 3000]
+
+For each hyper-parameter, the model is trained using the training period from 2008 to 2018 and evaluated in terms of AUC during the validating years 2019 to 2022.
+
+
 ## Acknowledgments
 
 - Hugging Face Transformers library
